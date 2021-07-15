@@ -93,4 +93,4 @@ app.get('*', async (req, res) => {
 	res.render('error');
 });
 
-app.listen($PORT, () => console.log(`App listening!`))
+app.listen(process.env.PORT, () => console.log(`App listening!`))
