@@ -15,7 +15,6 @@ app.use(bodyParser.urlencoded({
 app.set('views', './views');
 app.use('/static', express.static(path.resolve('static')));
 app.set('view engine', 'ejs');
-const port = 80
 
 app.get('/', async (req, res) => {
 	res.render('index', { page: 'Home', menuId: 'home' });
@@ -94,4 +93,4 @@ app.get('*', async (req, res) => {
 	res.render('error');
 });
 
-app.listen(port, () => console.log(`App listening on port ${port}!`))
+app.listen($PORT, () => console.log(`App listening!`))
